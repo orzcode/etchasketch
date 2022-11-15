@@ -2,9 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid white;
+    border: 1px solid black;
+    background-color: bisque;
 }
 
 #container {
-
+    display: grid;
+    background-color: rgb(35, 109, 85);
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px 150px;
+    place-content: stretch;
+    place-items: stretch;
+    gap: 5px;
 }
