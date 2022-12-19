@@ -25,11 +25,22 @@ a {
 }
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
-#container {
+#grid {
     display: grid;
-    background-color: rgb(35, 109, 85);
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    gap: 5px;
+    /* background-color: rgb(35, 109, 85); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: min-content;
+    margin: auto;
 }
 
+.gridBlock {
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(57, 57, 72);
+    transition: background-color 0.2s ease-out;
+}
+
+.gridBlock:hover{
+    background-color: rgba(83, 83, 90, 0.9);
+}
