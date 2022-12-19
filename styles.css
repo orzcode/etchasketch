@@ -2,16 +2,33 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
-    background-color: bisque;
+    outline: 1px solid black;
 }
-
+html {
+    background-color: rgb(200, 200, 200);
+    font-family: Roboto, sans-serif;
+    font-size: 62.5%;
+    /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+}
+body {
+    font-size: 2rem;
+    /* font-size: calc(1.5rem + 0.4vw); */
+    /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+    /* FONTSIZE - Adding the 0.4 is for responsivity */
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color:initial;
+}
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
 #container {
     display: grid;
     background-color: rgb(35, 109, 85);
     grid-template-columns: 150px 150px 150px 150px;
     grid-template-rows: 150px 150px 150px 150px;
-    place-content: stretch;
-    place-items: stretch;
     gap: 5px;
 }
