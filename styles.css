@@ -38,9 +38,4 @@ a {
     width: 20rem;
     height: 20rem;
     background-color: rgb(57, 57, 72);
-    transition: background-color 0.2s ease-out;
-}
-
-.gridBlock:hover{
-    background-color: rgba(83, 83, 90, 0.9);
 }
