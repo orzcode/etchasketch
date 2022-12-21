@@ -8,6 +8,7 @@ Add a button to the top of the screen that will send the user a popup asking for
 Research button tags in HTML and how you can make a JavaScript function run when one is clicked.
 Also check out prompts.
 You should be able to enter 64 and have a brand new 64x64 grid pop up without changing the total amount of pixels used.
+
 Push your project to GitHub!
 Extra Credit
 Instead of just changing the color of a square from black to white (for example), have each pass through with the mouse change it to a completely random RGB value. Then try having each pass just add another 10% of black to it so that only after 10 passes is the square completely black.

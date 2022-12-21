@@ -30,7 +30,7 @@ a {
     /* background-color: rgb(35, 109, 85); */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: min-content;
+    width: fit-content;
     margin: auto;
 }
 
@@ -38,4 +38,12 @@ a {
     width: 20rem;
     height: 20rem;
     background-color: rgb(57, 57, 72);
+}
+
+button {
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 4px;
+    border: transparent;
+    font-size: xx-large;
 }
