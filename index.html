@@ -10,8 +10,16 @@
 <body>
     <h1>Etch-a-sketch</h1>
 
-    <button id="gridSizer" onclick="gridSizer()">Grid size</button>
-    <button id="test" onclick="resize(10)">size test</button>
+    <button id="4x4" onclick="resize(4)">4x4 Grid</button>
+    <button id="8x8" onclick="resize(8)">8x8 Grid</button>
+    <button id="16x16" onclick="resize(16)">16x16 Grid</button>
+    <button id="32x32" onclick="resize(32)">32x32 Grid</button>
+    <button id="64x64" onclick="resize(64)">64x64 Grid</button>
+    <form>
+        <button><label for="custom">Custom size (max 100):</label></button>
+        <input type="number" id="custom" name="custom" min="2" max="100" minlength="1" placeholder="e.g. 100">
+      </form>
+    
     <div id="grid">    
 
 

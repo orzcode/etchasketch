@@ -2,7 +2,7 @@ let newSize;
 const div = document.createElement("div");
 //Create a block for the grid
 
-for (let i = 100; i > 0; i--){
+for (let i = 7744; i > 0; i--){
 	div.classList.add('gridBlock');
 	grid.append(div.cloneNode(true));	
 };
@@ -37,9 +37,11 @@ function resize(num){
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
 	grid.style.gridTemplateColumns = "repeat(" + num + ", 1fr)";
 	document.querySelectorAll(".gridBlock").forEach(item => {
-		item.style.height = num + "rem";
-		item.style.width = num + "rem";
+		item.style.height = (100 / num) + "rem";
+		item.style.width = (100 / num) + "rem";
 	});
 }
-//Proof of concept for the resize function. Uses a variable (newSize) which
-//must be invoked (i.e. this func must be invoked) at end of clicking button func
+//Resize function. Uses a variable (newSize) which must be
+//invoked (i.e. this func must be invoked) upon clicking button.
+//Takes the btn value as param.
+//
