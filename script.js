@@ -4,7 +4,7 @@ gridSize(16);
 function gridSize(sizeSquared){
 	const div = document.createElement("div");
 for (let i = sizeSquared; i > 0; i--){
-	changeGridBlockColor();
+	newColorChange();
 	div.classList.add('gridBlock');
 	grid.append(div.cloneNode(true));
 };
@@ -18,15 +18,28 @@ function removeGridBlocks(){
 })}
 //Removes all child nodes, used during grid re-sizing
 
-
-function changeGridBlockColor(){
-	document.querySelectorAll(".gridBlock").forEach(item => {
-	item.addEventListener('mouseenter', event => {
-		item.style.backgroundColor = "lightblue";
-	})
-})};
+//---------------------------------------------------
+// function changeGridBlockColor(){
+// 	document.querySelectorAll(".gridBlock").forEach(item => {
+// 	item.addEventListener('mouseenter', event => {
+// 		item.style.backgroundColor = "lightblue";
+// 	})
+// })};
 //Go through and apply colorchange on mouseenter, to each one
 //THIS IS CAUSING MAJOR SLOWDOWNS ABOVE 16X16
+//------------------------------------------------------------
+
+//CURRENTLY NOT WORKING
+function newColorChange(){
+	grid.addEventListener('mouseenter', function (event) {
+
+		if (event.target.classList.contains('.gridBlock')) {
+		event.target.style.backgroundColor = "lightblue";
+	 }	//else {alert("newColorChange function isn't working!")};//
+})
+};
+//CURRENTLY NOT WORKING
+
 
 
 
