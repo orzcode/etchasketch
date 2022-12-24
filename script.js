@@ -1,4 +1,3 @@
-let newGridSize;
 gridSize(16);
 //Run the INITIAL gridsize function (4x4)
 
@@ -26,9 +25,10 @@ function changeGridBlockColor(){
 		item.style.backgroundColor = "lightblue";
 	})
 })};
-changeGridBlockColor();
 //Go through and apply colorchange on mouseenter, to each one
-//this part is cumbersome due to the 'fake' DOM gridblocks.
+//THIS IS CAUSING MAJOR SLOWDOWNS ABOVE 16X16
+
+
 
 //----DEPRECATED - alert asking for grid size - now we use buttons
 // function gridSizer(){
@@ -44,11 +44,12 @@ changeGridBlockColor();
 // };
 //----DEPRECATED - alert asking for grid size - now we use buttons
 
+
+
 function resize(num){
 	// alert("resize is " + num);
 	removeGridBlocks();
-	newGridSize = num * num;
-	gridSize(newGridSize);
+	gridSize(num * num);
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
 	grid.style.gridTemplateColumns = "repeat(" + num + ", 1fr)";
 	document.querySelectorAll(".gridBlock").forEach(item => {
