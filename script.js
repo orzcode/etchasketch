@@ -75,3 +75,16 @@ function resize(num){
 //Takes the btn value as param.
 //Also runs the gridBlock element remover FIRST.
 //the ORDER of this function is vital else grid won't render properly.
+
+////----Options Buttons Functions-----////
+////// (not part of core program) /////
+function toggleGrid(){
+	if (document.querySelector(".gridBlock").style.outline == "1px solid black") {
+		document.querySelectorAll(".gridBlock").forEach(item => {
+			item.style.outline == "revert";
+		})
+	}
+	else {
+		document.querySelectorAll(".gridBlock").forEach(item => {
+		item.style.outline == "1px solid black";
+		})}};
