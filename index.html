@@ -10,7 +10,7 @@
 <body>
     <h1>Etch-a-sketch</h1>
 <div class="options">
-    <button>Clear</button>
+    <button onclick="clear()">Clear</button>
     <button onclick="toggleGrid()">Toggle Grid</button>
 </div>
 
@@ -22,10 +22,6 @@
     <button id="64x" onclick="resize(64)">64x64 Grid</button>
     <button id="100x" onclick="resize(100)">100x100 Grid</button>
 </div>
-    <!-- <form>
-        <button><label for="custom">Custom size (max 100):</label></button>
-        <input type="number" id="custom" name="custom" min="2" max="100" minlength="1" placeholder="e.g. 100">
-      </form> -->
     
     <div id="grid">    
 
