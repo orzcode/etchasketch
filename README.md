@@ -4,6 +4,8 @@ Make CSS vars for two main colors (and use these in the JS)
 
 toggle and clear buttons - try using 'while' or loops instead of 'foreach'
 
+make mouseover event include click/drag
+
 
 
 Extra Credit
