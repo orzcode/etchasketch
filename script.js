@@ -6,7 +6,7 @@ for (let i = sizeSquared; i > 0; i--){
 	const div = document.createElement("div");
 	div.classList.add('gridBlock');
 	div.addEventListener('mouseenter', function(){
-		div.style.backgroundColor = "lightblue";
+		div.style.backgroundColor = "var(--grid-hover-color)";
 	})
 	grid.append(div);
 	};
