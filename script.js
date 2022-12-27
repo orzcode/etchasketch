@@ -6,6 +6,7 @@ for (let i = sizeSquared; i > 0; i--){
 	const div = document.createElement("div");
 	div.classList.add('gridBlock');
 	div.addEventListener('mouseenter', function(){
+		// div.classList.add('gridBlockHover');// --currently not in use
 		div.style.backgroundColor = "var(--grid-hover-color)";
 	})
 	grid.append(div);
@@ -51,5 +52,6 @@ function toggleGrid(){
 //Toggles grid lines - in the form of css outline
 
 function clear(){
+	alert("what the fuck?");
 	//resets grid colors to initial
 }

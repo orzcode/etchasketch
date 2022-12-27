@@ -52,6 +52,10 @@ a {
     background-color: var(--grid-base-color);
 }
 
+/* .gridBlockHover {
+    background-color: var(--grid-hover-color);
+} */
+
 button {
     width: 18rem;
     height: 6rem;
