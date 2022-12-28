@@ -48,13 +48,12 @@ a {
 .gridBlock {
     width: 25rem;
     height: 25rem;
-    outline: 1px solid black;
     background-color: var(--grid-base-color);
 }
 
-/* .gridBlockHover {
-    background-color: var(--grid-hover-color);
-} */
+.gridBlockOutline {
+    outline: 1px solid black;
+}
 
 button {
     width: 18rem;

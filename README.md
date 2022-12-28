@@ -1,7 +1,5 @@
 TODO:
 
-toggle and clear buttons - try using 'while' or loops instead of 'foreach'
-
 make mouseover event include click/drag
 
 

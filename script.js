@@ -1,10 +1,11 @@
 gridSize(16);
+
 //Run the INITIAL gridsize function (4x4)
 
 function gridSize(sizeSquared){	
 for (let i = sizeSquared; i > 0; i--){
 	const div = document.createElement("div");
-	div.classList.add('gridBlock');
+	div.classList.add('gridBlock', 'gridBlockOutline');
 	div.addEventListener('mouseenter', function(){
 		// div.classList.add('gridBlockHover');// --currently not in use
 		div.style.backgroundColor = "var(--grid-hover-color)";
@@ -37,21 +38,19 @@ function resize(num){
 //Also runs the gridBlock element remover FIRST.
 //the ORDER of this function is vital else grid won't render properly.
 
+
 ////----Options Buttons Functions-----////
 ////// (not part of core program) /////
 function toggleGrid(){
-	if (document.querySelector(".gridBlock").style.outline == "1px solid black") {
-		document.querySelectorAll(".gridBlock").forEach(item => {
-			item.style.outline == "revert";
-		})
-	}
-	else {
-		document.querySelectorAll(".gridBlock").forEach(item => {
-		item.style.outline == "1px solid black";
-		})}};
-//Toggles grid lines - in the form of css outline
-
-function clear(){
-	alert("what the fuck?");
-	//resets grid colors to initial
+	document.querySelectorAll(".gridBlock").forEach(item => {
+		item.classList.toggle("gridBlockOutline");
+	})
 }
+//Toggles grid lines - in the form of css outline class toggle
+
+function clearGraffiti(){
+	document.querySelectorAll(".gridBlock").forEach(item => {
+		item.style.backgroundColor = "var(--grid-base-color)";
+	})
+}
+//resets grid colors to base color
