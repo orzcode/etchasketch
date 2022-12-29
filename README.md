@@ -1,6 +1,10 @@
 TODO:
 
-make mouseover event include click/drag
+fix click/drag so you can un-do (erase)
+
+remove drag cursor?
+
+CSS styling 
 
 
 

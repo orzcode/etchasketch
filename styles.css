@@ -83,6 +83,11 @@ h1 {
     padding-left: 100%;
 }
 
+.options {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 6fr;

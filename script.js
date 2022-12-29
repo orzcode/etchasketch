@@ -3,16 +3,34 @@ gridSize(16);
 //Run the INITIAL gridsize function (4x4)
 
 function gridSize(sizeSquared){	
-for (let i = sizeSquared; i > 0; i--){
-	const div = document.createElement("div");
-	div.classList.add('gridBlock', 'gridBlockOutline');
-	div.addEventListener('mouseenter', function(){
-		// div.classList.add('gridBlockHover');// --currently not in use
+	for (let i = sizeSquared; i > 0; i--){
+	  const div = document.createElement("div");
+	  div.classList.add('gridBlock', 'gridBlockOutline');
+  
+	  // Add a mousedown event listener to the div
+	  div.addEventListener('mousedown', function() {
+		// Change the color of the div to the hover color
 		div.style.backgroundColor = "var(--grid-hover-color)";
-	})
-	grid.append(div);
-	};
-}
+	  });
+  
+	  // Add a mouseenter event listener to the div
+	  div.addEventListener('mouseenter', function() {
+		// Check if the mouse is being clicked
+		if (event.buttons === 1) {
+		  // Change the color of the div to the hover color
+		  div.style.backgroundColor = "var(--grid-hover-color)";
+		}
+	  });
+  
+	  div.addEventListener('dragenter', function() {
+		// Change the color of the div to the hover color
+		div.style.backgroundColor = "var(--grid-hover-color)";
+	  });
+  
+  
+	  grid.append(div);
+	}
+  }
 //Create a div cell for the grid,
 //Add the class .gridBlock, append to the grid, apply mouseover event
 //loops x times based on resize(func)
