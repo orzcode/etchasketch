@@ -1,5 +1,6 @@
 gridSize(16);
-
+let brushColor;
+colorPicker();
 //Run the INITIAL gridsize function (4x4)
 
 function gridSize(sizeSquared){	
@@ -26,13 +27,12 @@ function gridSize(sizeSquared){
 		// Change the color of the div to the hover color
 		div.style.backgroundColor = "var(--grid-hover-color)";
 	  });
-  
-  
+   
 	  grid.append(div);
 	}
   }
 //Create a div cell for the grid,
-//Add the class .gridBlock, append to the grid, apply mouseover event
+//Add the class .gridBlock, append to the grid, apply mouseover events
 //loops x times based on resize(func)
 
 function removeAllChildNodes(parent) {
@@ -72,3 +72,12 @@ function clearGraffiti(){
 	})
 }
 //resets grid colors to base color
+
+function colorPicker(){
+	let colorPicker = document.querySelector("#colorPicker");
+	colorPicker.addEventListener("change", updateColor, false);
+	updateColor(event){
+		brushColor = event.target.value;
+	}
+	alert("brush is " + brushColor);
+}
