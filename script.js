@@ -1,6 +1,5 @@
 gridSize(16);
-let brushColor;
-colorPicker();
+let brushColor = "var(--grid-hover-color)";
 //Run the INITIAL gridsize function (4x4)
 
 function gridSize(sizeSquared){	
@@ -75,9 +74,9 @@ function clearGraffiti(){
 
 function colorPicker(){
 	let colorPicker = document.querySelector("#colorPicker");
-	colorPicker.addEventListener("change", updateColor, false);
-	updateColor(event){
-		brushColor = event.target.value;
-	}
-	alert("brush is " + brushColor);
+	colorPicker.addEventListener("change", function(){
+		brushColor = colorPicker.value;
+		alert("brush is " + brushColor);
+	})
 }
+colorPicker()
