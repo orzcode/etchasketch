@@ -38,7 +38,8 @@ a {
     height: 100rem;
     max-width: 100rem;
     max-height: 100rem;
-    padding-left: 4rem;
+    outline: 10px solid black;
+    border-radius: 4px;
 }
 
 .gridBlock {
@@ -54,6 +55,7 @@ a {
     display: flex;
     margin-bottom: 5rem;
     justify-content: center;
+    gap: 5rem;
 }
 
 button {
@@ -90,8 +92,13 @@ input {
 #sizeBtns, #options {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10rem 1rem;
+    align-self: center;
+    background-color: rgb(111, 111, 111);
+    height: 75rem;
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    border: 10px solid black;
+    border-radius: 20px;
 }
 body {
     display: flex;
