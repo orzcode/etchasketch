@@ -1,5 +1,6 @@
 gridSize(16);
 let brushColor = "var(--grid-hover-color)";
+let eraserToggle = false;
 colorPicker();
 //Run the INITIAL gridsize function (4x4)
 
@@ -7,7 +8,8 @@ function gridSize(sizeSquared){
 	for (let i = sizeSquared; i > 0; i--){
 	  const div = document.createElement("div");
 	  div.classList.add('gridBlock', 'gridBlockOutline');
-  
+  	  grid.append(div);
+
 	  // Add a mousedown event listener to the div
 	  div.addEventListener('mousedown', function() {
 		// Change the color of the div to the hover color
@@ -27,8 +29,6 @@ function gridSize(sizeSquared){
 		// Change the color of the div to the hover color
 		div.style.backgroundColor = brushColor;
 	  });
-   
-	  grid.append(div);
 	}
   }
 //Create a div cell for the grid,
@@ -73,9 +73,72 @@ function clearGraffiti(){
 }
 //resets grid colors to base color
 
+function eraser(){
+	switch (eraserToggle) {
+		case false:
+			eraserColor();
+			eraserToggle = true;
+			break;
+		case true:
+			brush();
+			eraserToggle = false;
+			break;
+}}
+
 function colorPicker(){
 	let colorPicker = document.querySelector("#colorPicker");
 	colorPicker.addEventListener("change", function(){
 		brushColor = colorPicker.value;
 	})
 }
+
+
+/////////////////////////////////////
+//Eraser and Brush Color Toggle Functions
+function eraserColor(){
+	document.querySelectorAll(".gridBlock").forEach(item => {
+		// Add a mousedown event listener to the div
+		item.addEventListener('mousedown', function() {
+			// Change the color of the div to the hover color
+			item.style.backgroundColor = "var(--grid-base-color)";
+		  });
+	  
+		  // Add a mouseenter event listener to the div
+		  item.addEventListener('mouseenter', function() {
+			// Check if the mouse is being clicked
+			if (event.buttons === 1) {
+			  // Change the color of the div to the hover color
+			  item.style.backgroundColor = "var(--grid-base-color)";
+			}
+		  });
+	  
+		  item.addEventListener('dragenter', function() {
+			// Change the color of the div to the hover color
+			item.style.backgroundColor = "var(--grid-base-color)";
+		  });
+})
+}
+
+function brush(){
+	document.querySelectorAll(".gridBlock").forEach(item => {
+	// Add a mousedown event listener to the div
+	item.addEventListener('mousedown', function() {
+		// Change the color of the div to the hover color
+		item.style.backgroundColor = brushColor;
+	  });
+  
+	  // Add a mouseenter event listener to the div
+	  item.addEventListener('mouseenter', function() {
+		// Check if the mouse is being clicked
+		if (event.buttons === 1) {
+		  // Change the color of the div to the hover color
+		  item.style.backgroundColor = brushColor;
+		}
+	  });
+  
+	  item.addEventListener('dragenter', function() {
+		// Change the color of the div to the hover color
+		item.style.backgroundColor = brushColor;
+	  });
+})}
+///////////////////////////////////////////////////
