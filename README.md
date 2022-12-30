@@ -1,10 +1,8 @@
 TODO:
 
-fix click/drag so you can un-do (erase)
-
 remove drag cursor?
 
-CSS styling 
+styling 
 
 
 
