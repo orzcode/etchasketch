@@ -1,5 +1,6 @@
 gridSize(16);
 let brushColor = "var(--grid-hover-color)";
+colorPicker();
 //Run the INITIAL gridsize function (4x4)
 
 function gridSize(sizeSquared){	
@@ -10,7 +11,7 @@ function gridSize(sizeSquared){
 	  // Add a mousedown event listener to the div
 	  div.addEventListener('mousedown', function() {
 		// Change the color of the div to the hover color
-		div.style.backgroundColor = "var(--grid-hover-color)";
+		div.style.backgroundColor = brushColor;
 	  });
   
 	  // Add a mouseenter event listener to the div
@@ -18,13 +19,13 @@ function gridSize(sizeSquared){
 		// Check if the mouse is being clicked
 		if (event.buttons === 1) {
 		  // Change the color of the div to the hover color
-		  div.style.backgroundColor = "var(--grid-hover-color)";
+		  div.style.backgroundColor = brushColor;
 		}
 	  });
   
 	  div.addEventListener('dragenter', function() {
 		// Change the color of the div to the hover color
-		div.style.backgroundColor = "var(--grid-hover-color)";
+		div.style.backgroundColor = brushColor;
 	  });
    
 	  grid.append(div);
@@ -76,7 +77,5 @@ function colorPicker(){
 	let colorPicker = document.querySelector("#colorPicker");
 	colorPicker.addEventListener("change", function(){
 		brushColor = colorPicker.value;
-		alert("brush is " + brushColor);
 	})
 }
-colorPicker()
