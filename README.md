@@ -4,6 +4,8 @@ remove drag cursor?
 
 styling 
 
+button effects, button toggle states, grid responsivity so not reliant on 100rem?
+
 
 
 Extra Credit

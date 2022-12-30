@@ -68,9 +68,9 @@ button {
 }
 
 h1 {
-    width:100vw;
     text-align: center;
     margin: auto;
+    padding: 4rem 0;
 }
 
 #colorBtn {
