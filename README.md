@@ -1,10 +1,12 @@
 TODO:
 
+button toggle states - doubleclicking required, why? add size togglestates too
+
 remove drag cursor?
 
 styling 
 
-button effects, button toggle states, grid responsivity so not reliant on 100rem?
+grid responsivity so not reliant on 100rem?
 
 
 

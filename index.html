@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Oswald|Audiowide">
     <title>Etch-a-sketch</title>
 </head>
 <body>
@@ -12,10 +13,10 @@
     <div class="main">
 
         <div id="options">
-            <button onclick="clearGraffiti()">Clear</button>
-            <button onclick="toggleGrid()">Toggle Grid</button>    
-            <button onclick="eraser()">Toggle Eraser</button>
-            <button id="colorBtn">
+            <button class="btnShadow" onclick="clearGraffiti()">Clear</button>
+            <button class="btnShadow" onclick="toggleGrid()">Toggle Grid</button>    
+            <button class="btnShadow" onclick="eraser()">Toggle Eraser</button>
+            <button class="btnShadow" id="colorBtn">
                 <label for="colorPicker">Color:</label>
                 <input type="color" id="colorPicker" value="#A0C8D7">
             </button>
@@ -24,10 +25,10 @@
         <div id="sizeBtns">
             <!-- <button id="4x" onclick="resize(4)">4x4 Grid</button>
             <button id="8x" onclick="resize(8)">8x8 Grid</button> -->
-            <button id="16x" onclick="resize(16)">Small Grid (16x16)</button>
-            <button id="32x" onclick="resize(32)">Medium Grid (32x32)</button>
-            <button id="64x" onclick="resize(64)">Large Grid (64x64)</button>
-            <button id="100x" onclick="resize(100)">Huge Grid (100x100)</button>
+            <button class="btnShadow" id="16x" onclick="resize(16)">Small Grid (16x16)</button>
+            <button class="btnShadow" id="32x" onclick="resize(32)">Medium Grid (32x32)</button>
+            <button class="btnShadow" id="64x" onclick="resize(64)">Large Grid (64x64)</button>
+            <button class="btnShadow" id="100x" onclick="resize(100)">Huge Grid (100x100)</button>
         </div>    
 
         <div id="grid"></div>

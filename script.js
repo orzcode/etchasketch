@@ -1,4 +1,4 @@
-gridSize(16);
+resize(16);
 let brushColor = "var(--grid-hover-color)";
 let eraserToggle = false;
 colorPicker();
@@ -60,6 +60,7 @@ function resize(num){
 ////----Options Buttons Functions-----////
 ////// (not part of core program) /////
 function toggleGrid(){
+	btnToggle()
 	document.querySelectorAll(".gridBlock").forEach(item => {
 		item.classList.toggle("gridBlockOutline");
 	})
@@ -74,6 +75,7 @@ function clearGraffiti(){
 //resets grid colors to base color
 
 function eraser(){
+	btnToggle()
 	switch (eraserToggle) {
 		case false:
 			eraserColor();
@@ -141,4 +143,18 @@ function brush(){
 		item.style.backgroundColor = brushColor;
 	  });
 })}
+///////////////////////////////////////////////////
+//Button Toggle (style) function//
+let btnToggleVar = false;
+function btnToggle(){
+	switch (btnToggleVar) {
+		case false:
+			document.activeElement.style.outline = "5px solid black";
+			btnToggleVar = true;
+			break;
+		case true:
+			document.activeElement.style.outline = "initial";
+			btnToggleVar = false;
+			break;
+}}
 ///////////////////////////////////////////////////
