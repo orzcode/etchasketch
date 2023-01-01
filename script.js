@@ -2,6 +2,8 @@ resize(16);
 let brushColor = "var(--grid-hover-color)";
 let eraserToggle = false;
 colorPicker();
+document.querySelector("#toggleGrid").classList.add("btnToggle");
+document.querySelector("#initialGrid").classList.add("btnToggle");
 //Run the INITIAL gridsize function (4x4)
 
 function gridSize(sizeSquared){	
@@ -43,6 +45,15 @@ function removeAllChildNodes(parent) {
 //Removes all child nodes, used during grid re-sizing
 
 function resize(num){
+	/*This removes the outline from all resize btns, then adds to the active/clicked button*/
+	document.querySelectorAll(".sizeBtn").forEach(item => {
+		item.classList.remove("btnToggle");
+	})
+	document.activeElement.classList.add("btnToggle");
+	/*This removes the outline from all resize btns, then adds to the active/clicked button*/
+
+	/*Code below runs grid resizing*/
+	document.querySelector("#toggleGrid").classList.add("btnToggle");
 	removeAllChildNodes(grid);
 	gridSize(num * num);
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
@@ -60,7 +71,7 @@ function resize(num){
 ////----Options Buttons Functions-----////
 ////// (not part of core program) /////
 function toggleGrid(){
-	optToggle()
+	document.activeElement.classList.toggle("btnToggle");
 	document.querySelectorAll(".gridBlock").forEach(item => {
 		item.classList.toggle("gridBlockOutline");
 	})
@@ -75,7 +86,7 @@ function clearGraffiti(){
 //resets grid colors to base color
 
 function eraser(){
-	optToggle()
+	document.activeElement.classList.toggle("btnToggle");
 	switch (eraserToggle) {
 		case false:
 			eraserColor();
@@ -143,18 +154,4 @@ function brush(){
 		item.style.backgroundColor = brushColor;
 	  });
 })}
-///////////////////////////////////////////////////
-//Button Toggle (style) function//
-let optToggleVar = false;
-function optToggle(){
-	switch (optToggleVar) {
-		case false:
-			document.activeElement.style.outline = "5px solid black";
-			optToggleVar = true;
-			break;
-		case true:
-			document.activeElement.style.outline = "initial";
-			optToggleVar = false;
-			break;
-}}
 ///////////////////////////////////////////////////

@@ -1,7 +1,5 @@
 TODO:
 
-button toggle states - doubleclicking required, why? add size togglestates too
-
 remove drag cursor?
 
 styling 
