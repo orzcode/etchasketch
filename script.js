@@ -52,6 +52,8 @@ function resize(num){
 	document.activeElement.classList.add("btnToggle");
 	/*This removes the outline from all resize btns, then adds to the active/clicked button*/
 
+	let gridWH = (grid.clientWidth / 10);
+
 	/*Code below runs grid resizing*/
 	document.querySelector("#toggleGrid").classList.add("btnToggle");
 	removeAllChildNodes(grid);
@@ -59,8 +61,8 @@ function resize(num){
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
 	grid.style.gridTemplateColumns = "repeat(" + num + ", 1fr)";
 	document.querySelectorAll(".gridBlock").forEach(item => {
-		item.style.height = (100 / num) + "rem";
-		item.style.width = (100 / num) + "rem";
+		item.style.height = (gridWH / num) + "rem";
+		item.style.width = (gridWH / num) + "rem";
 	});
 }
 //Takes the resize btn value as param.

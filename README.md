@@ -5,6 +5,9 @@ remove drag cursor?
 styling 
 
 grid responsivity so not reliant on 100rem?
+	tip: use (grid.clientWidth / 10) and (grid.clientHeight / 10) in place of '100' inside resize func calculation, BUT, put these as a var outside the function
+		^^done, and working.
+	tip: CSS width/height of grid, 43vw seems to be good - but doesn't work. Investigate.
 
 
 
