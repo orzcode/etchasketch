@@ -60,7 +60,7 @@ function resize(num){
 ////----Options Buttons Functions-----////
 ////// (not part of core program) /////
 function toggleGrid(){
-	btnToggle()
+	optToggle()
 	document.querySelectorAll(".gridBlock").forEach(item => {
 		item.classList.toggle("gridBlockOutline");
 	})
@@ -75,7 +75,7 @@ function clearGraffiti(){
 //resets grid colors to base color
 
 function eraser(){
-	btnToggle()
+	optToggle()
 	switch (eraserToggle) {
 		case false:
 			eraserColor();
@@ -145,16 +145,16 @@ function brush(){
 })}
 ///////////////////////////////////////////////////
 //Button Toggle (style) function//
-let btnToggleVar = false;
-function btnToggle(){
-	switch (btnToggleVar) {
+let optToggleVar = false;
+function optToggle(){
+	switch (optToggleVar) {
 		case false:
 			document.activeElement.style.outline = "5px solid black";
-			btnToggleVar = true;
+			optToggleVar = true;
 			break;
 		case true:
 			document.activeElement.style.outline = "initial";
-			btnToggleVar = false;
+			optToggleVar = false;
 			break;
 }}
 ///////////////////////////////////////////////////

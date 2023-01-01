@@ -78,6 +78,11 @@ button {
     transform: translate3d(0.5px, 1px, 0);
 }
 
+.btnToggle {
+    outline: 5px solid black;
+}
+/*used in JS when button toggling - optToggle or sizeToggle*/
+
 h1 {
     text-align: center;
     margin: auto;
