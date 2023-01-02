@@ -9,13 +9,13 @@
     <title>Etch-a-sketch</title>
 </head>
 <body>
-    <h1>Etch-a-sketch</h1>
+    <h1 id="heading">Etch-a-sketch</h1>
     <div class="main">
 
         <div id="options">
             <button class="btnShadow" onclick="clearGraffiti()">Clear</button>
             <button class="btnShadow" id="toggleGrid" onclick="toggleGrid()">Toggle Grid</button>    
-            <button class="btnShadow" id="toggleEraser" classonclick="eraser()">Toggle Eraser</button>
+            <button class="btnShadow" id="toggleEraser" onclick="eraser()">Toggle Eraser</button>
             <button class="btnShadow" id="colorBtn">
                 <label for="colorPicker">Color:</label>
                 <input type="color" id="colorPicker" value="#A0C8D7">
@@ -31,7 +31,7 @@
             <button class="btnShadow sizeBtn" onclick="resize(100)">Huge Grid (100x100)</button>
         </div>    
 
-        <div id="grid"></div>
+        <div id="grid" draggable="false"></div>
 
     </div>
 <script src="script.js" defer></script>

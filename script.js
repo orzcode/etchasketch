@@ -10,6 +10,7 @@ function gridSize(sizeSquared){
 	for (let i = sizeSquared; i > 0; i--){
 	  const div = document.createElement("div");
 	  div.classList.add('gridBlock', 'gridBlockOutline');
+	  div.setAttribute('draggable', 'false');
   	  grid.append(div);
 
 	  // Add a mousedown event listener to the div
