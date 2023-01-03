@@ -1,4 +1,7 @@
-resize(12);
+window.onload = () => {
+	resize(12)
+}
+
 let brushColor = "var(--grid-hover-color)";
 let eraserToggle = false;
 colorPicker();
@@ -39,9 +42,7 @@ function gridSize(sizeSquared){
 //loops x times based on resize(func)
 
 function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
+    grid.innerHTML = '';
 }
 //Removes all child nodes, used during grid re-sizing
 

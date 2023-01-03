@@ -38,13 +38,20 @@ a {
 /* ---------------------------------------------------- */
 #grid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 80rem;
     height: 80rem;
     outline: 8px solid black;
     border-radius: 4px;
 }
+
+@media only screen and (max-width: 768px) {
+    #grid {
+        width: 50rem;
+        height: 50rem;
+    }
+    
+}
+
 
 .gridBlock {
     background-color: var(--grid-base-color);
@@ -94,11 +101,11 @@ button {
     letter-spacing: 0.5rem;
 }
 
+/*These are tied together - and crafted delicately as the color picker is actually an 'input' which is being forcibly positioned inside the button*/
 #colorBtn {
     position: relative;
     padding-bottom: 20%;
 }
-
 input {
     position: absolute;
     right: 0;
@@ -110,6 +117,8 @@ input {
     border: none;
     background-color: var(--button-color);
 }
+/*These are tied together - and crafted delicately as the color picker is actually an 'input' which is being forcibly positioned inside the button*/
+
 
 #sizeBtns, #options {
     display: flex;
