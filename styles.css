@@ -138,10 +138,20 @@ body {
     }
     .main {
         flex-direction: column;
+        align-items: center;
     }
     #sizeBtns, #options {
         flex-direction: row;
-        height:20rem;
-        align-self: auto;
+        height:10rem;
+        align-items: center;
+        gap: 1rem;
+    }
+    button {
+       width: 16rem;
+       height: 7rem;
+    }
+    #colorBtn {
+        max-height: 7rem;
+        max-width: 16rem;
     }
 }
