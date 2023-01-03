@@ -44,15 +44,6 @@ a {
     border-radius: 4px;
 }
 
-@media only screen and (max-width: 900px) {
-    #grid {
-        width: 50rem;
-        height: 50rem;
-    }
-    
-}
-
-
 .gridBlock {
     background-color: var(--grid-base-color);
 }
@@ -136,4 +127,21 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+}
+
+
+/*----------------------*/
+@media all and (max-width: 900px) {
+    #grid {
+        width: 50rem;
+        height: 50rem;
+    }
+    .main {
+        flex-direction: column;
+    }
+    #sizeBtns, #options {
+        flex-direction: row;
+        height:20rem;
+        align-self: auto;
+    }
 }
