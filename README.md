@@ -1,6 +1,6 @@
 TODO:
 
-Responsivity - gridblocks not resizing automatically; gutter gaps appear.
+Responsivity - grid width fixed using `flex-shrink: 0` however auto-flexing may be better
 
 Add a footer
 

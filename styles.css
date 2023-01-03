@@ -42,10 +42,12 @@ a {
     height: 80rem;
     outline: 8px solid black;
     border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .gridBlock {
     background-color: var(--grid-base-color);
+    background-size: contain;
 }
 .gridBlockOutline {
     outline: 1px solid black;
@@ -95,7 +97,7 @@ button {
 /*These are tied together - and crafted delicately as the color picker is actually an 'input' which is being forcibly positioned inside the button*/
 #colorBtn {
     position: relative;
-    padding-bottom: 20%;
+    padding-bottom: 6rem;
 }
 input {
     position: absolute;
@@ -103,8 +105,8 @@ input {
     bottom: 0;
     width: 100%;
     height: 50%;
-    padding: 0.1rem 1rem;
-    margin: 0.3rem 0;
+    margin-bottom: 0.2rem;
+    padding: 0 1rem;
     border: none;
     background-color: var(--button-color);
 }
@@ -131,7 +133,7 @@ body {
 
 
 /*----------------------*/
-@media all and (max-width: 900px) {
+@media all and (max-width: 1200px) {
     #grid {
         width: 50rem;
         height: 50rem;
@@ -148,6 +150,5 @@ body {
     }
     button {
        width: 16rem;
-       height: 7rem;
     }
 }

@@ -62,10 +62,10 @@ function resize(num){
 	gridSize(num * num);
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
 	grid.style.gridTemplateColumns = "repeat(" + num + ", 1fr)";
-	document.querySelectorAll(".gridBlock").forEach(item => {
-		item.style.height = (gridWH / num) + "rem";
-		item.style.width = (gridWH / num) + "rem";
-	});
+	// document.querySelectorAll(".gridBlock").forEach(item => {
+	// 	item.style.height = (gridWH / num) + "rem";
+	// 	item.style.width = (gridWH / num) + "rem";
+	// });
 }
 //Takes the resize btn value as param.
 //Also runs the gridBlock element remover FIRST.
@@ -159,3 +159,27 @@ function brush(){
 	  });
 })}
 ///////////////////////////////////////////////////
+
+function kekw() {
+	document.querySelectorAll(".gridBlock").forEach(item => {
+		// Add a mousedown event listener to the div
+		item.addEventListener('mousedown', function() {
+			// Change the color of the div to the hover color
+			item.style.backgroundImage = "url('kekw.png')";
+		  });
+	  
+		  // Add a mouseenter event listener to the div
+		  item.addEventListener('mouseenter', function() {
+			// Check if the mouse is being clicked
+			if (event.buttons === 1) {
+			  // Change the color of the div to the hover color
+			 item.style.backgroundImage = "url('kekw.png')";
+			}
+		  });
+	  
+		  item.addEventListener('dragenter', function() {
+			// Change the color of the div to the hover color
+			item.style.backgroundImage = "url('kekw.png')";
+		  });
+	})
+}
