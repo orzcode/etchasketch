@@ -1,4 +1,4 @@
-resize(16);
+resize(12);
 let brushColor = "var(--grid-hover-color)";
 let eraserToggle = false;
 colorPicker();
