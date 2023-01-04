@@ -26,6 +26,7 @@ li {
 }
 a {
     text-decoration: none;
+    text-shadow: none;
     color:initial;
 }
 :root {
@@ -132,12 +133,19 @@ body {
     height: 100vh;
 }
 
+.footer {
+    font-size: x-large;
+    margin:auto;
+}
+
 
 /*----------------------*/
 @media all and (max-width: 1200px) {
     #grid {
-        width: 50rem;
-        height: 50rem;
+        width: 60vw;
+        height: 60vw;
+        min-width: 50rem;
+        min-height: 50rem;
     }
     .main {
         flex-direction: column;
@@ -145,7 +153,7 @@ body {
     }
     #sizeBtns, #options {
         flex-direction: row;
-        height:10rem;
+        max-height: 10rem;
         align-items: center;
         gap: 1rem;
     }
