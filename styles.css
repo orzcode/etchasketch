@@ -40,8 +40,8 @@ a {
 /* ---------------------------------------------------- */
 #grid {
     display: grid;
-    width: 80rem;
-    height: 80rem;
+    width: 75rem;
+    height: 75rem;
     outline: 8px solid black;
     border-radius: 4px;
     flex-shrink: 0;
@@ -63,7 +63,7 @@ a {
 }
 
 button {
-    width: 18rem;
+    width: 16rem;
     height: 7rem;
     padding: 1rem;
     border-radius: 5px;
@@ -120,7 +120,7 @@ input {
     flex-direction: column;
     align-self: center;
     background-color: var(--button-pane-color);
-    height: 75rem;
+    height: 70rem;
     justify-content: space-between;
     padding: 3rem 1rem;
     outline: 5px solid black;
