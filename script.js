@@ -177,6 +177,9 @@ function brush(){
 ///////////////////////////////////////////////////
 let kekwFlag = false;
 function kekw() {
+	document.activeElement.classList.toggle("btnToggle");
+	//toggles the button outline/border
+	
 	if (kekwFlag == true){
 		brush();
 		kekwFlag = false;
