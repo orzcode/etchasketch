@@ -154,6 +154,7 @@ body {
     .main {
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
     #sizeBtns, #options {
         flex-direction: row;
