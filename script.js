@@ -189,7 +189,7 @@ function kekw() {
 		// Add a mousedown event listener to the div
 		item.addEventListener('mousedown', function() {
 			// Change the color of the div to the hover color
-			item.style.backgroundImage = "url('kekw.png')";
+			item.style.backgroundImage = "url('kekw.jpg')";
 		  });
 	  
 		  // Add a mouseenter event listener to the div
@@ -197,12 +197,12 @@ function kekw() {
 			// Check if the mouse is being clicked
 			if (event.buttons === 1) {
 			  // Change the color of the div to the hover color
-			 item.style.backgroundImage = "url('kekw.png')";
+			 item.style.backgroundImage = "url('kekw.jpg')";
 			}
 		  });	  
 		  item.addEventListener('dragenter', function() {
 			// Change the color of the div to the hover color
-			item.style.backgroundImage = "url('kekw.png')";
+			item.style.backgroundImage = "url('kekw.jpg')";
 		  });
 	})};
 }
