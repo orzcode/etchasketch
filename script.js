@@ -178,7 +178,8 @@ function brush(){
 })}
 ///////////////////////////////////////////////////
 function kekw() {
-	document.activeElement.classList.toggle("btnToggle");
+	document.querySelector("#kekw").classList.toggle("btnToggle");
+	document.querySelector("#toggleEraser").classList.remove("btnToggle")
 	//toggles the button outline/border
 	
 	if (kekwFlag == true){
