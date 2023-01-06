@@ -220,7 +220,7 @@ function buttonManager(button){
 			fuck
 			break;
 		case brush:
-			fuck
+			//call this from the colorPicker eventlistener
 			break;
 		case kekw:
 			fuck
