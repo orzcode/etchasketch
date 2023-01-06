@@ -95,7 +95,7 @@ function clearGraffiti(){
 //resets grid colors to base canvas color
 
 function eraser(){
-	document.activeElement.classList.toggle("btnToggle");
+	document.querySelector("#toggleEraser").classList.toggle("btnToggle");
 	switch (eraserFlag) {
 		case false:
 			//case FALSE is when you turn ON the Eraser button (then turns TRUE)
@@ -176,6 +176,9 @@ function brush(){
 		item.style.backgroundImage = "none";
 	  });
 })}
+//this 'brush()' function is what physically applies the color, however it is
+//dependant on colorPicker() to get the color - which gets called at page load
+
 ///////////////////////////////////////////////////
 function kekw() {
 	document.querySelector("#kekw").classList.toggle("btnToggle");
@@ -207,4 +210,20 @@ function kekw() {
 			item.style.backgroundImage = "url('kekw.jpg')";
 		  });
 	})};
+}
+
+/////////testing a central function for choosing buttons/////
+function buttonManager(button){
+	//action button functions here, AND add outline toggles
+	switch (button){
+		case eraser:
+			fuck
+			break;
+		case brush:
+			fuck
+			break;
+		case kekw:
+			fuck
+			break;
+	}
 }
