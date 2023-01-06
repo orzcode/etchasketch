@@ -1,13 +1,14 @@
 window.onload = () => {
 	resize(12)
+	document.querySelector("#initialGrid").classList.add("btnToggle");
 	//Run the INITIAL gridsize function	
 }
 
 let brushColor = "var(--grid-hover-color)";
-let eraserToggle = false;
+let eraserFlag = false;
+let kekwFlag = false;
+let brushFlag = false;
 colorPicker();
-document.querySelector("#toggleGrid").classList.add("btnToggle");
-document.querySelector("#initialGrid").classList.add("btnToggle");
 
 
 function gridSize(sizeSquared){	
@@ -63,6 +64,7 @@ function resize(num){
 
 	/*Code below runs grid resizing*/
 	document.querySelector("#toggleGrid").classList.add("btnToggle");
+	
 	removeAllChildNodes(grid);
 	gridSize(num * num);
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
@@ -94,20 +96,20 @@ function clearGraffiti(){
 
 function eraser(){
 	document.activeElement.classList.toggle("btnToggle");
-	switch (eraserToggle) {
+	switch (eraserFlag) {
 		case false:
-			//case FALSE is when you turn ON the Eraser button
+			//case FALSE is when you turn ON the Eraser button (then turns TRUE)
 			eraserColor();
-			eraserToggle = true;
+			eraserFlag = true;
 			break;
 		case true:
-			//case TRUE is when you turn OFF the Eraser button
+			//case TRUE is when you turn OFF the Eraser button (then turns FALSE)
 			if (kekwFlag == true){
 				kekw();
 			}else {
 			brush();
 			}
-			eraserToggle = false;
+			eraserFlag = false;
 			break;
 }}
 
@@ -175,7 +177,6 @@ function brush(){
 	  });
 })}
 ///////////////////////////////////////////////////
-let kekwFlag = false;
 function kekw() {
 	document.activeElement.classList.toggle("btnToggle");
 	//toggles the button outline/border
