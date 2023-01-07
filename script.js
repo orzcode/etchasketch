@@ -1,13 +1,13 @@
 window.onload = () => {
 	resize(12)
 	document.querySelector("#initialGrid").classList.add("btnToggle");
+	btnMngr('colorBtn');
 	//Run the INITIAL gridsize function	
 }
 
 let brushColor = "var(--grid-hover-color)";
-let eraserFlag = false;
-let kekwFlag = false;
-let brushFlag = false;
+let activeBrush;
+
 colorPicker();
 
 
@@ -57,14 +57,8 @@ function resize(num){
 	document.activeElement.classList.add("btnToggle");
 	/*This removes the outline from all resize btns, then adds to the active/clicked button*/
 
-	////////////////////////////////////////////////////////
-	// let gridWH = (grid.clientWidth / 10);
-	//no longer used, but kept for reference
-	//was used to calculate gridblock size based on grid size
-
 	/*Code below runs grid resizing*/
-	document.querySelector("#toggleGrid").classList.add("btnToggle");
-	
+	document.querySelector("#toggleGrid").classList.add("btnToggle");	
 	removeAllChildNodes(grid);
 	gridSize(num * num);
 	grid.style.gridTemplateRows = "repeat(" + num + ", 1fr)";
@@ -72,12 +66,25 @@ function resize(num){
 	//Takes the resize btn value as param.
 	//Also runs the gridBlock element remover FIRST.
 	//the ORDER of this function is vital else grid won't render properly.
+
+	//Code below checks active brush and runs btnMnger function
+	//add any future brush buttons here, and in button manager function
+	switch (activeBrush){
+		case "eraser":
+			btnMngr('eraser');
+			break;
+		case "colorBtn":
+			btnMngr('colorBtn');
+			break;
+		case "kekw":
+			btnMngr('kekw');
+			break;
+	}
 }
 
 
 
 ////----Options Buttons Functions-----////
-////// (not part of core program) /////
 function toggleGrid(){
 	document.activeElement.classList.toggle("btnToggle");
 	document.querySelectorAll(".gridBlock").forEach(item => {
@@ -94,25 +101,6 @@ function clearGraffiti(){
 }
 //resets grid colors to base canvas color
 
-function eraser(){
-	document.querySelector("#toggleEraser").classList.toggle("btnToggle");
-	switch (eraserFlag) {
-		case false:
-			//case FALSE is when you turn ON the Eraser button (then turns TRUE)
-			eraserColor();
-			eraserFlag = true;
-			break;
-		case true:
-			//case TRUE is when you turn OFF the Eraser button (then turns FALSE)
-			if (kekwFlag == true){
-				kekw();
-			}else {
-			brush();
-			}
-			eraserFlag = false;
-			break;
-}}
-
 function colorPicker(){
 	let colorPicker = document.querySelector("#colorPicker");
 	colorPicker.addEventListener("input", function(){
@@ -120,7 +108,6 @@ function colorPicker(){
 		brush();
 	})
 }
-
 
 /////////////////////////////////////
 //Eraser and Brush Color Toggle Functions
@@ -181,15 +168,6 @@ function brush(){
 
 ///////////////////////////////////////////////////
 function kekw() {
-	document.querySelector("#kekw").classList.toggle("btnToggle");
-	document.querySelector("#toggleEraser").classList.remove("btnToggle")
-	//toggles the button outline/border
-	
-	if (kekwFlag == true){
-		brush();
-		kekwFlag = false;
-	} else {
-	kekwFlag = true;
 	document.querySelectorAll(".gridBlock").forEach(item => {
 		// Add a mousedown event listener to the div
 		item.addEventListener('mousedown', function() {
@@ -210,20 +188,30 @@ function kekw() {
 			item.style.backgroundImage = "url('kekw.jpg')";
 		  });
 	})};
-}
+
 
 /////////testing a central function for choosing buttons/////
-function buttonManager(button){
-	//action button functions here, AND add outline toggles
-	switch (button){
-		case eraser:
-			fuck
+function btnMngr(brushtype){
+	document.querySelector("#colorBtn").classList.remove("btnToggle");
+	document.querySelector("#toggleEraser").classList.remove("btnToggle");
+	document.querySelector("#kekw").classList.remove("btnToggle");	
+	switch (brushtype){
+		case "eraser":
+			document.querySelector("#toggleEraser").classList.add("btnToggle");
+			eraserColor();
+			activeBrush = "eraser";
 			break;
-		case brush:
-			//call this from the colorPicker eventlistener
+		case "colorBtn":
+			//call this from the colorPicker eventlistener(????)
+			document.querySelector("#colorBtn").classList.add("btnToggle");
+			brush();
+			activeBrush = "colorBtn";
 			break;
-		case kekw:
-			fuck
+		case "kekw":
+			document.querySelector("#kekw").classList.add("btnToggle");
+			kekw();
+			activeBrush = "kekw";
 			break;
 	}
 }
+

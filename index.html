@@ -17,9 +17,9 @@
         <div id="options">
             <button class="btnShadow" onclick="clearGraffiti()">Clear</button>
             <button class="btnShadow" id="toggleGrid" onclick="toggleGrid()">Toggle Grid</button>    
-            <button class="btnShadow" id="toggleEraser" onclick="eraser()">Toggle Eraser</button>
-            <button class="btnShadow" id="colorBtn">
-                <label for="colorPicker">Color:</label>
+            <button class="btnShadow" id="toggleEraser" onclick="btnMngr('eraser')">Eraser</button>
+            <button class="btnShadow" id="colorBtn" onclick="btnMngr('colorBtn')">
+                <label for="colorPicker">Paintbrush:</label>
                 <input type="color" id="colorPicker" value="#03729B">
             </button>
         </div>
@@ -33,7 +33,7 @@
         </div>    
 
     </div>
-    <button class="btnShadow" id="kekw" onclick="kekw()">kekw</button>
+    <button class="btnShadow" id="kekw" onclick="btnMngr('kekw')">kekw</button>
     <div class="footer">Created by Orz <a href="https://github.com/orzcode" target="_blank"><i class="fa fa-github"></i></a> View: <a href="https://raw.githubusercontent.com/orzcode/etchasketch/main/index.html">HTML</a> <a href="https://orzcode.github.io/etchasketch/styles.css">CSS</a> <a href="https://orzcode.github.io/etchasketch/script.js">JS</a></div>
     <div class="footer"><em>In memory of <a href="https://en.wikipedia.org/wiki/El_Risitas">El Risitas</a></em></div>
     <div class="footer"><img src="risitas_blur.png"></div>
