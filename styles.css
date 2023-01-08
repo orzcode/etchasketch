@@ -40,8 +40,8 @@ a {
 /* ---------------------------------------------------- */
 #grid {
     display: grid;
-    width: 75rem;
-    height: 75rem;
+    width: 70rem;
+    height: 70rem;
     outline: 8px solid black;
     border-radius: 4px;
     flex-shrink: 0;
@@ -121,7 +121,7 @@ input {
     flex-direction: column;
     align-self: center;
     background-color: var(--button-pane-color);
-    height: 70rem;
+    height: 65rem;
     justify-content: space-between;
     padding: 3rem 1rem;
     outline: 5px solid black;
@@ -147,8 +147,8 @@ img {
 /*----------------------*/
 @media all and (max-width: 1200px) {
     #grid {
-        width: 60vw;
-        height: 60vw;
+        max-width: 50rem;
+        max-height: 50rem;
         min-width: 50rem;
         min-height: 50rem;
     }
@@ -165,5 +165,11 @@ img {
     }
     button {
        width: 16rem;
+       height: 6rem;
+       font-size:large;
+    }
+    #colorBtn {
+        position: relative;
+        padding-bottom: 5rem;
     }
 }

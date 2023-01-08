@@ -1,5 +1,7 @@
 **Etch-a-Sketch project**
 
+Live page can be seen at: https://orzcode.github.io/etchasketch/
+
 This was a Javascript project for an Etch-a-Sketch which involved a lot of DOM manipulation and interaction between JS and CSS styles. Due to the number of buttons, and my desire to retain active button states (and the outlines showing this) between grid resizes, numerous functions were used and re-worked over the course of the project, including most recently a 'button manager' function to handle this more cleanly.
 
 Responsivity was not a goal for this project as the nature of such an etchasketch is that it's difficult to use on mobile, i.e. with thumbs. A mouse is required for best results. However, minor responsivity was implemented anyway for resizing to a different layout (column vs original row) for smaller screens. This may be polished as a stretch target.
