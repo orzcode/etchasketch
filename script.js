@@ -79,6 +79,9 @@ function resize(num){
 		case "kekw":
 			btnMngr('kekw');
 			break;
+		case "psychoKek":
+			btnMngr('psychoKek');
+			break;
 	}
 }
 
@@ -192,7 +195,10 @@ function kekw(){
 
 //////reusable random color generator (var)////////////////
 let randColor = () =>  {
-	return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+	let hex = Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+	let opacity = 80;
+	//80 is a hex value for 50% opacity
+	return "(#" + hex + opacity + ", #" + hex + opacity + ")"
 }
 //generates a random HEX color value; (note: function, even though looks like a var)
 ///////////////////////////////////////////////////////////
@@ -202,7 +208,8 @@ function psychoKek(){
 	item.addEventListener('mousedown', function() {
 		// Change the color of the div to the hover color
 		// item.style.backgroundColor = "rgba(50, 70, 80, 0.1)";
-		item.style.background = "url('kekw.jpg')";
+		item.style.background = "linear-gradient" + randColor() + ", url('kekw.jpg')";
+		item.style.backgroundSize = "cover";
 	  });
   
 	  // Add a mouseenter event listener to the div
@@ -211,14 +218,16 @@ function psychoKek(){
 		if (event.buttons === 1) {
 		  // Change the color of the div to the hover color
 		//   item.style.backgroundColor = "rgba(50, 70, 80, 0.1)";
-		  item.style.background = "url('kekw.jpg')";
+		item.style.background = "linear-gradient" + randColor() + ", url('kekw.jpg')";
+		item.style.backgroundSize = "cover";
 		}
 	  });
   
 	  item.addEventListener('dragenter', function() {
 		// Change the color of the div to the hover color
 		// item.style.backgroundColor = "rgba(50, 70, 80, 0.1)";
-		item.style.background = "url('kekw.jpg')";
+		item.style.background = "linear-gradient" + randColor() + ", url('kekw.jpg')";
+		item.style.backgroundSize = "cover";
 	  });
 })}
 
@@ -228,6 +237,7 @@ function btnMngr(brushtype){
 	document.querySelector("#colorBtn").classList.remove("btnToggle");
 	document.querySelector("#toggleEraser").classList.remove("btnToggle");
 	document.querySelector("#kekw").classList.remove("btnToggle");	
+	document.querySelector("#psychoKek").classList.remove("btnToggle");	
 	switch (brushtype){
 		case "eraser":
 			document.querySelector("#toggleEraser").classList.add("btnToggle");
@@ -245,6 +255,11 @@ function btnMngr(brushtype){
 			kekw();
 			activeBrush = "kekw";
 			break;
+		case "psychoKek":
+			document.querySelector("#psychoKek").classList.add("btnToggle");
+			psychoKek();
+			activeBrush = "psychoKek";
 	}
 }
+// any future buttons must be added here, and in 'activeBrush' near top of file
 
