@@ -176,6 +176,7 @@ function kekw(){
 		item.addEventListener('mousedown', function() {
 			// Change the color of the div to the hover color
 			item.style.backgroundImage = "url('kekw.jpg')";
+			item.style.backgroundSize = "cover";
 		  });
 	  
 		  // Add a mouseenter event listener to the div
@@ -184,11 +185,13 @@ function kekw(){
 			if (event.buttons === 1) {
 			  // Change the color of the div to the hover color
 			 item.style.backgroundImage = "url('kekw.jpg')";
+			 item.style.backgroundSize = "cover";
 			}
 		  });	  
 		  item.addEventListener('dragenter', function() {
 			// Change the color of the div to the hover color
 			item.style.backgroundImage = "url('kekw.jpg')";
+			item.style.backgroundSize = "cover";
 		  });
 	})};
 /////////////////////////////////////////////////////////////
